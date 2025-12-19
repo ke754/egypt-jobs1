@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>دليل المهن المصري</title>
+  <!-- Google Fonts و أيقونات -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- كود إعلانات Google -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6581851050083164"
+     crossorigin="anonymous"></script>
+
+  <style>
+:root {
+  --gold: #FFD700;
+  --neon: #fff700;
+  --dark: #181616;
+  --glass: rgba(40,33,20,.73);
+  --glass-light: rgba(30,30,25,0.19);
+  --gradient: linear-gradient(135deg,#101019 0%,#887400 120%);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body {
+  font-family:'Cairo',sans-serif;background:var(--gradient), #171717;
+  min-height:100vh;color:#fff;overflow-x:hidden;
+}
+
+.landing-page {
+  min-height:100vh;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;position:relative;z-index:2;
+  background:linear-gradient(140deg,#00000050 0%,#ffd70010 75%);
+  animation:fadeInMain 1.65s;
+  text-align:center;
+  padding:0 14px;
+}
+
+@keyframes fadeInMain {
+  from {opacity:0;transform:translateY(50px) scale(.97);}
+  to   {opacity:1;}
+}
+.landing-logo {
+  font-size:3.3rem;font-weight:900;font-family:'Cairo',sans-serif;
+  color:var(--gold);
+  letter-spacing:1px;text-shadow:0 0 18px #fff70055, 0 4px 30px #00000090;
+  display:inline-block; line-height:1;
+  margin-bottom:.3em;
+  animation:fancyLogo .95s cubic-bezier(.56,1.58,.48,.86);
+}
+@keyframes fancyLogo {
+  from{letter-spacing:-9px;opacity:0;filter:blur(8px);}
+  to{letter-spacing:1px;opacity:1;}
+}
+
+.landing-desc {
+  font-size:1.22rem;color:#ffeaa0;
+  max-width:540px;padding:8px 16px 14px 16px;margin-bottom:.5em;margin-right:auto;margin-left:auto;
+  backdrop-filter:blur(2.5px);
+  border-radius:19px;
+  border-left:4px solid var(--gold);
+  background:var(--glass-light);
+  opacity:.92;box-shadow:0 0 16px 0 #ffd70011;
+  animation:fadeUpText 1.5s .6s both;
+}
+
+@keyframes fadeUpText {
+  from{opacity:0;transform:translateY(44px);}
+  to{opacity:.94;transform:translateY(0);}
+}
+
+.job-counter {
+  background:linear-gradient(135deg, var(--gold), var(--neon));
+  color: #221400 !important;
+  font-weight: 900;
+  font-size: 1.4rem;
+  padding: 12px 24px;
+  border-radius: 50px;
+  box-shadow: 0 8px 32px rgba(255,215,0,0.4);
+  margin: 20px 0;
+  animation: pulseCounter 2s infinite;
+  border: 2px solid rgba(255,255,255,0.3);
+}
+
+@keyframes pulseCounter {
+  0%, 100% { transform: scale(1); box-shadow: 0 8px 32px rgba(255,215,0,0.4); }
+  50% { transform: scale(1.05); box-shadow: 0 12px 40px rgba(255,215,0,0.6); }
+}
+
+.landing-points-list {
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+  margin:26px 0 40px 0;
+  font-weight:600;color:#f7f7f9;font-size:1.09rem;
+  animation:fadePoints 1.22s 1.3s backwards;
+}
+.landing-points-list span {
+  background:rgba(30,30,13,0.23);border-radius:13px;padding:9px 21px 9px 12px;box-shadow:0 8px 30px #ffd7000b;
+  display:flex;align-items:center;gap:10px;
+  backdrop-filter:blur(1.5px);
+  border-right:4px solid #ffd70080;
+  border-bottom:1.5px solid #fff70044;
+}
+
+@keyframes fadePoints {
+  from{opacity:0;filter:blur(6px);}
+  to{opacity:1;}
+}
+.landing-search-btn{
+  display:inline-block;
+  margin-top:11px;
+  background:linear-gradient(87deg,#ffe067 70%,var(--neon) 110%);
+  color:#221400;font-weight:bold;font-size:1.3rem;
+  border-radius:60px;
+  border:none;
+  padding:18px 50px;
+  letter-spacing:.07em;
+  cursor:pointer;
+  box-shadow:0 13px 52px 0 var(--gold)22, 0 2px 44px -10px #fff90014;
+  position:relative;overflow:hidden;transition:.29s cubic-bezier(.4,2,.6,1);
+  animation:bounceBtn 1.2s 1.9s both;
+}
+@keyframes bounceBtn {
+  0% {transform:scale(.8) translateY(30px);opacity:0;}
+  66%{transform:scale(1.08);}
+  90%{transform:scale(.87);}
+  100%{transform:scale(1);opacity:1;}
+}
+.landing-search-btn span{
+  position:relative;
+  z-index:2;
+  animation:glowBtnText 1.8s infinite alternate cubic-bezier(.35,.6,.54,1.1);
+}
+@keyframes glowBtnText {
+  0%{text-shadow:0 0 0 #fff;}
+  80%{text-shadow:0 0 24px #fff70080, 0 0 10px #fffbb0;}
+  100%{text-shadow:0 0 36px #fff700a0,0 0 24px #fff8;}
+}
+.landing-search-btn:after{
+  content:'';
+  position:absolute;
+  left:0;top:0;width:100%;height:100%;z-index:1;
+  background:linear-gradient(100deg,#fff70033 40%,#fff7 80%,#ffd70005 100%);
+  opacity:.2;pointer-events:none;
+  transition:.12s;
+}
+.landing-search-btn:hover{
+  box-shadow:0 3px 20px 0 var(--gold)90,0 8px 22px 0 #fff70044;
+  background:linear-gradient(70deg,#fff440,#fcefbd 90%);
+  transform:translateY(-4px) scale(1.045);
+}
+.landing-search-btn:active{transform:scale(.99);}
+.landing-arrow{
+  font-size:2.24em;display:block;margin:auto;margin-top:8px;
+  color:var(--gold);animation:arrowDownMove 1.9s infinite;
+  opacity:.85;
+}
+@keyframes arrowDownMove {
+  0% {transform:translateY(0);}
+  50%{transform:translateY(13px);}
+  100%{transform:translateY(0);}
+}
+.ads-area {
+  margin:26px auto 4px auto;max-width:360px;text-align:center;
+  min-height:80px;
+}
+
+/*==== باقي الموقع يكون خلفية متدرجة رائعة =====*/
+.site-wrapper-sections{
+  min-height:80vh;position:relative;z-index:1;
+  padding:20px 0 50px 0;
+  background:linear-gradient(115deg,#0f0f10 0%,#fff0 20%,#181300 80%);
+  box-shadow:0 -14px 44px #ffd70007;
+}
+
+/* ===== تابز ===== */
+.top-nav-sections {
+  display:flex;gap:9px;justify-content:center;padding-top:18px;
+  margin-bottom:0;
+}
+.section-btn{
+  color:var(--gold)!important;background:linear-gradient(45deg,#191919,#1c1c0f);
+  padding:10px 25px 10px 25px;
+  border-radius:40px;border:1px solid #333;
+  font-weight:800;font-size:1.04em;transition:0.23s;
+  margin-bottom:8px;
+  cursor:pointer;
+}
+.section-btn.active,
+.section-btn:hover{background:linear-gradient(60deg,#fffde4,#ffe042 140%);color:#000!important;}
+.section-block{display:none;}
+.section-block.active{display:block;animation:fadeSection 1.0s;}
+@keyframes fadeSection{from{opacity:0;transform:translateY(35px);}to{opacity:1;}}
+.card{
+  margin-top:24px;background:var(--glass);
+  border-radius:19px;padding:24px 18px;max-width:560px;margin:auto;
+  box-shadow:0 0 44px #ffd7000b;
+  border:1px solid #2a211b;
+}
+.card h2{color:var(--neon);margin-bottom:15px;}
+.btn,
+.wa-btn, .contact-btn {
+  background:linear-gradient(45deg,var(--gold) 20%,var(--neon) 90%);
+  color:#292200!important;font-weight:700;
+  border:none;padding:12px 0;border-radius:50px;
+  width:100%;display:block;cursor:pointer;
+  font-size:1.01rem;transition:.23s;
+  box-shadow:0 0 10px 1px var(--neon);
+  margin-top:5px;
+}
+.wa-btn {
+  background:linear-gradient(45deg,#24d366,var(--gold) 90%);
+  color:#003018 !important;width:auto;padding:10px 22px;
+  display:inline-block;margin-top:3px;font-size:1.05rem;
+}
+.btn:hover,.contact-btn:hover{box-shadow:0 0 24px 4px #ffd70060;}
+.result-card{
+  background:linear-gradient(135deg,#111b,#110a);
+  border-radius:16px;
+  padding:13px;margin-bottom:10px;
+  box-shadow:0 0 10px #ffd70013;
+  border:1px solid #33251e;
+  color:#fff;
+  font-size:1.01rem;
+}
+.result-card .phone{margin-top:8px;color:var(--gold);font-weight:900;}
+.results-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px;margin-top:18px;}
+.empty-state{text-align:center;color:#aaaa;padding:20px;}
+
+@media (max-width:650px){
+  .landing-logo{font-size:2.1rem;}
+  .landing-desc{font-size:.94rem;padding:.5em;}
+  .landing-points-list{font-size:1em;}
+  .card{padding:8px;}
+  .results-grid{grid-template-columns:1fr;}
+  .job-counter{font-size:1.2rem;padding:10px 20px;}
+}
+/* تحكم باشكال input */
+input,select{padding:13px 13px;border-radius:9px;
+  border:1px solid #252d1e;background:#111b;color:#fff;}
+input:focus,select:focus{border-color:var(--gold);box-shadow:0 0 0 1.5px #ffd70077;}
+label{font-weight:600;margin-bottom:4px;display:block;}
+.form-group{margin-bottom:12px;}
+  </style>
+</head>
+<body>
+<!-- صفحة الترحيب الرئيسية -->
+<section class="landing-page" id="landingSection">
+  <div class="landing-logo">
+    <i class="fa-solid fa-briefcase"></i>
+    دليل المهن المصري
+  </div>
+  <div class="landing-desc">
+    منصة ذكية تربط المواطنين والحرفيين/المهنيين في جميع محافظات مصر.<br>
+    ابحث عن محترف في تخصص معين، أو سوِّق لمهنتك مجاناً!<br>
+    واجهة سهلة على الجوال والكمبيوتر بمجرد نقرة.<br>
+    <small style="color:#fffbaa;opacity:.7">صنع بكل حب مصري ♥</small>
+  </div>
+  
+  <!-- عداد عدد المهن المسجلة -->
+  <div class="job-counter" id="jobsCounter">
+    <i class="fas fa-users"></i> عدد المهن المسجلة: <span id="counterNumber">0</span>
+  </div>
+  
+  <div class="landing-points-list">
+    <span><i class="fa-solid fa-magnifying-glass"></i> بحث سريع عن أي حرفي أو مهني في أقرب منطقة</span>
+    <span><i class="fa-solid fa-user-tie"></i> أضف مهنتك ليصل إليك العملاء مجانًا</span>
+    <span><i class="fa-solid fa-mobile-screen"></i> متوافق مع كافة الأجهزة والشاشات</span>
+  </div>
+  <button class="landing-search-btn" onclick="enterSite()">
+    <span>
+      <i class="fa-solid fa-bolt"></i>&nbsp; ابدأ البحث الآن
+    </span>
+  </button>
+  <span class="landing-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+
+  <!-- مكان إعلان Google واضح وبارز أعلى الصفحة مثلا -->
+  <div class="ads-area">
+    <!-- اعلان بانر افقى -->
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-6581851050083164"
+      data-ad-slot="3679749477"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+</section>
+
+<!-- واجهة الأدوات والموقع الرئيسية -->
+<section class="site-wrapper-sections" id="siteSections" style="display:none;">
+  <nav class="top-nav-sections">
+    <button class="section-btn active" onclick="changeSection('searchsec',this)">بحث عن مهنة</button>
+    <button class="section-btn" onclick="changeSection('register',this)">تسجيل مهنة</button>
+    <button class="section-btn" onclick="changeSection('contact',this)">اتصل بنا</button>
+  </nav>
+
+  <!-- بحث عن مهنة -->
+  <section class="section-block active" id="searchsec">
+    <div class="card">
+      <h2><i class="fas fa-search"></i> البحث عن مهنة أو محترف</h2>
+      <div class="form-group">
+        <label>المحافظة</label>
+        <select id="governorate" onchange="updateMarkazHay()">
+          <option value="">اختر المحافظة</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>المركز/الحي</label>
+        <select id="markazHay">
+          <option value="">اختر المركز أو الحي</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>المجال / المهنة</label>
+        <select id="jobField">
+          <optgroup label="المجال الطبي">
+            <option>طبيب بشري</option><option>طبيب أسنان</option><option>صيدلي</option>
+            <option>ممرض / ممرضة</option><option>مساعد طبيب</option>
+            <option>فني مختبرات</option><option>أخصائي علاج طبيعي</option>
+            <option>مساعد علاج طبيعي</option><option>معمل تحاليل</option>
+            <option>مركز أشعة</option><option>صيادلة</option><option>بصريات</option>
+            <option>أخصائي تغذية</option><option>أخصائي نفسي</option><option>استشاري أمراض</option>
+          </optgroup>
+          <optgroup label="القانون والإدارة">
+            <option>محامي</option><option>مستشار قانوني</option><option>محاسب قانوني</option>
+            <option>مدير إداري</option><option>سكرتير/سكرتيرة</option>
+            <option>مراجع حسابات</option><option>كاتب إداري</option>
+            <option>موارد بشرية</option><option>أخصائي رواتب</option>
+          </optgroup>
+          <optgroup label="الهندسة والتقنية">
+            <option>مهندس مدني</option><option>مهندس عمارة</option><option>مهندس كهرباء</option>
+            <option>مهندس ميكانيكا</option><option>مهندس اتصالات</option>
+            <option>مهندس بترول</option><option>مهندس كيميائي</option>
+            <option>مهندس إنتاج</option><option>مهندس أجهزة طبية</option><option>مهندس برمجيات</option>
+            <option>مبرمج</option><option>مصمم جرافيك</option><option>مسؤول شبكات</option>
+            <option>تحليل بيانات</option><option>تقني صيانة حواسيب</option>
+          </optgroup>
+          <optgroup label="الحرف والصناعات">
+            <option>سباك</option><option>نجار</option><option>حداد</option>
+            <option>كهربائي</option><option>فني تكييف وتبريد</option>
+            <option>فني كهرباء سيارات</option><option>ميكانيكي سيارات</option>
+            <option>فني دهانات</option><option>فني سيراميك</option>
+            <option>بناء/معلم محارة</option><option>فني ألمنيوم</option>
+            <option>مبلط</option><option>صباغ</option><option>ترزي / خياط</option>
+            <option>إسكافي</option><option>عامل مصنع</option>
+            <option>عامل ورشة نجارة</option><option>عامل انتاج</option>
+          </optgroup>
+          <optgroup label="التعليم والتدريب">
+            <option>مدرس ابتدائي</option><option>مدرس إعدادي</option><option>مدرس ثانوي</option>
+            <option>محاضر جامعي</option><option>مدرب مهني</option>
+            <option>مدرس خاص</option><option>أخصائي تربية خاصة</option>
+            <option>مدرب رياضي</option><option>مدرب لغات</option>
+          </optgroup>
+          <optgroup label="الفن والإعلام">
+            <option>مصمم</option><option>فنان تشكيلي</option><option>مصور فوتوغرافي</option>
+            <option>مصور فيديو</option><option>مونتير فيديو</option><option>محرر صحفي</option>
+            <option>مخرج برامج</option><option>مقدم برامج</option>
+            <option>كاتب محتوى</option><option>مؤلف مسرحي</option>
+          </optgroup>
+          <optgroup label="السياحة والفندقة">
+            <option>مرشد سياحي</option><option>موظف استقبال فندق</option>
+            <option>مدير فندق</option><option>شيف</option>
+            <option>نادل / جرسون</option><option>منظم رحلات</option><option>سائق سياحي</option>
+          </optgroup>
+          <optgroup label="النقل والخدمات">
+            <option>سائق تاكسي</option><option>سائق نقل</option>
+            <option>عامل توصيل</option><option>فني شحن وتفريغ</option>
+            <option>عامل مخزن</option><option>أمن وحراسة</option>
+          </optgroup>
+          <optgroup label="الزراعة والبيئة">
+            <option>مهندس زراعي</option><option>مزارع</option><option>بيطري</option>
+            <option>عامل زراعي</option><option>إنتاج حيواني</option><option>مهندس ري</option>
+          </optgroup>
+          <optgroup label="الخدمات المنزلية">
+            <option>عامل نظافة</option><option>مربية أطفال</option>
+            <option>طباخة منزلية</option><option>جليسة مسنين</option>
+            <option>عامل صيانة منزلية</option>
+          </optgroup>
+          <optgroup label="التسويق والمبيعات">
+            <option>مندوب مبيعات</option><option>مسوق إلكتروني</option>
+            <option>مدير تسويق</option><option>بائع محل تجاري</option>
+          </optgroup>
+          <optgroup label="المالية والمصارف">
+            <option>محاسب بنكي</option><option>موظف بنك</option>
+            <option>صراف</option><option>مستشار مالي</option>
+          </optgroup>
+          <optgroup label="أخرى">
+            <option>مترجم</option><option>مؤذن/إمام مسجد</option><option>قائد كشافة</option>
+            <option>عامل موسمي</option><option>مهنة حرة (يُرجى التحديد)</option>
+          </optgroup>
+        </select>
+      </div>
+      <button class="btn" onclick="searchJobs()">بحث</button>
+    </div>
+    <h2 style="color:var(--gold);margin-top:18px;text-align:center;">المهن المُسجلة</h2>
+    <div class="results-grid" id="jobsResults"></div>
+  </section>
+
+  <!-- تسجيل مهنة -->
+  <section class="section-block" id="register">
+    <div class="card">
+      <h2><i class="fas fa-user-plus"></i> سجل مهنتك الآن</h2>
+      <div class="form-group"><input id="nameReg" placeholder="الاسم الكامل"></div>
+      <div class="form-group"><input id="jobReg" placeholder="المهنة / التخصص"></div>
+      <div class="form-group">
+        <select id="governorateReg" onchange="updateMarkazHay('Reg')">
+          <option value="">اختر المحافظة</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <select id="markazHayReg"><option value="">اختر المركز أو الحي</option></select>
+      </div>
+      <div class="form-group"><input id="phoneReg" placeholder="رقم الهاتف"></div>
+      <button class="btn" onclick="registerJob()">تسجيل وعرض للجميع</button>
+    </div>
+  </section>
+
+  <!-- اتصل بنا -->
+  <section class="section-block" id="contact">
+    <div class="card" style="text-align:center;">
+      <h2><i class="fas fa-envelope"></i> تواصل مع الدعم</h2>
+      <p style="color:#ffeaa0;font-weight:600;margin:12px 0">لأي استفسار أو دعم فني:</p>
+      <div style="font-size:1.10rem;margin-bottom:18px;">
+        <b>البريد:</b> <a href="mailto:om2234164@gmail.com" style="color:var(--gold);text-decoration:underline;">om2234164@gmail.com</a><br>
+        <b>واتساب:</b>
+        <a href="https://wa.me/201289633897" class="wa-btn" target="_blank">
+          <i class="fab fa-whatsapp"></i> 01289633897
+        </a>
+      </div>
+      <button class="contact-btn" onclick="window.location='mailto:om2234164@gmail.com'"><i class="fas fa-paper-plane"></i> تواصل بالبريد</button>
+    </div>
+  </section>
+</section>
+<script>
+/* دالة تحديث عداد المهن */
+function updateJobsCounter() {
+  const counterNumber = document.getElementById('counterNumber');
+  const totalJobs = jobsDB.length;
+  counterNumber.textContent = totalJobs;
+}
+
+/* ======= Landing actions ====== */
+function enterSite(){
+  document.getElementById('landingSection').style.display='none';
+  document.getElementById('siteSections').style.display='block';
+  window.scrollTo({top:0,behavior:'instant'});
+}
+
+/* ========= TABS ======== */
+function changeSection(id, btn){
+  document.querySelectorAll('.section-block').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.section-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+
+/* SAME governorate/markaz/data code */
+const data = {
+"القاهرة":{"أحياء":["مصر الجديدة","مدينة نصر","المعادي","حلوان","شبرا","الزيتون","المطرية","عين شمس","السيدة زينب","التجمع الخامس","شبرا الخيمة","المرج","الزمالك","وسط البلد","دار السلام","حدائق القبة","مدينة السلام","15 مايو","غير ذلك"]},
+"الجيزة":{"مراكز":["الجيزة","إمبابة","الدقي","العجوزة","الهرم","6 أكتوبر","البدرشين","العياط","الحوامدية","الباويطي (الواحات البحرية)","منشأة القناطر","كرداسة","أبو النمرس","أوسيم","الصف","أطفيح","ميت عقبة","العمرانية","غير ذلك"]},
+"الإسكندرية":{"أحياء":["العجمي","المنتزه","سيدي جابر","سيدي بشر","وسط الإسكندرية","جمرك","الدخيلة","محرم بك","شرق الإسكندرية","اللبان","غير ذلك"]},
+"الدقهلية":{"مراكز":["المنصورة","طلخا","ميت غمر","منية النصر","تمي الأمديد","السنبلاوين","دكرنس","بني عبيد","جمصة","شربين","المنزلة","أجا","بلقاس","نبروه","الجمالية","ميت سلسيل","محمود","غير ذلك"]},
+"البحر الأحمر":{"مراكز":["الغردقة","رأس غارب","سفاجا","القصير","مرسى علم","الشلاتين","حلايب","غير ذلك"]},
+"البحيرة":{"مراكز":["دمنهور","كفر الدوار","إيتاي البارود","حوش عيسى","الدلنجات","أبو المطامير","شبراخيت","الرحمانية","كوم حمادة","المحمودية","وادي النطرون","رشيد","إدكو","بدر","النوبارية","غير ذلك"]},
+"الفيوم":{"مراكز":["الفيوم","سنورس","إطسا","طامية","يوسف الصديق","أبشواي","غير ذلك"]},
+"الغربية":{"مراكز":["طنطا","المحلة الكبرى","زفتى","كفر الزيات","سمنود","قطور","بسيون","السنطة","غير ذلك"]},
+"الإسماعيلية":{"مراكز":["الإسماعيلية","القنطرة شرق","القنطرة غرب","فايد","أبوصوير","التل الكبير","غير ذلك"]},
+"المنوفية":{"مراكز":["شبين الكوم","الباجور","أشمون","منوف","بركة السبع","تلا","سرس الليان","شنتنا الحجر","السادات","قويسنا","غير ذلك"]},
+"المنيا":{"مراكز":["المنيا","سمالوط","أبو قرقاص","ملوي","مطاي","مغاغة","بني مزار","العدوة","دير مواس","غير ذلك"]},
+"القليوبية":{"مراكز":["بنها","شبرا الخيمة","القناطر الخيرية","قليوب","طوخ","شبين القناطر","الخانكة","كفر شكر","الخصوص","العبور","القلج","غير ذلك"]},
+"الوادي الجديد":{"مراكز":["الخارجة","الداخلة","الفرافرة","باريس","بلاط","غير ذلك"]},
+"الشرقية":{"مراكز":["الزقازيق","بلبيس","العاشر من رمضان","أبو حماد","فـاقـوس","منيا القمح","الإبراهيمية","ههيا","مشتول السوق","أبو كبير","القنايات","ديرب نجم","كفر صقر","أولاد صقر","الصالحية الجديدة","حسن يونس","غير ذلك"]},
+"السويس":{"مراكز":["السويس","فايد","الجناين","عتاقة","الأربعين","غير ذلك"]},
+"أسوان":{"مراكز":["أسوان","دراو","كوم أمبو","نصر النوبة","إدفو","أبوسمبل","غير ذلك"]},
+"أسيوط":{"مراكز":["أسيوط","ديروط","القوصية","منفلوط","أبنوب","الفتح","ساحل سليم","البداري","صدفا","الغنايم","أبو تيج","غير ذلك"]},
+"بني سويف":{"مراكز":["بني سويف","الواسطى","ناصر","إهناسيا","ببا","سمسطا","الفشن","غير ذلك"]},
+"بورسعيد":{"أحياء":["حي الشرق","حي العرب","حي الضواحي","حي المناخ","حي الزهور","حي الجنوب","غير ذلك"]},
+"دمياط":{"مراكز":["دمياط","رأس البر","فارسكور","الزرقا","كفر سعد","كفر البطيخ","عزبة البرج","السرو","ميت أبو غالب","غير ذلك"]},
+"جنوب سيناء":{"مراكز":["طور سيناء","شرم الشيخ","رأس سدر","نويبع","طابا","سانت كاترين","أبو رديس","أبوزنيمة","غير ذلك"]},
+"كفر الشيخ":{"مراكز":["كفر الشيخ","قلين","سيدي سالم","دسوق","فوه","مطوبس","الحامول","بلطيم","الرياض","برج البرلس","بيلا","غير ذلك"]},
+"مطروح":{"مراكز":["مرسى مطروح","الضبعة","الحمام","السلوم","سيدي براني","سيوة","العلمين","رأس الحكمة","غير ذلك"]},
+"الأقصر":{"مراكز":["الأقصر","إسنا","أرمنت","الطود","القرنة","البياضية","غير ذلك"]},
+"قنا":{"مراكز":["قنا","نجع حمادي","دشنا","قوص","قفط","نقادة","فرشوط","أبوتشت","الوقف","غير ذلك"]},
+"شمال سيناء":{"مراكز":["العريش","الشيخ زويد","رفح","بئر العبد","الحسنة","نخل","غير ذلك"]},
+"سوهاج":{"مراكز":["سوهاج","طهطا","طما","جهينة","المراغة","المنشأة","أخميم","جرجا","دار السلام","البلينا","ساقلتة","العسيرات","غير ذلك"]}
+};
+function fillGovernorates(){
+  var lists = ["#governorate","#governorateReg"];
+  lists.forEach(selId=>{
+    var sel=document.querySelector(selId);
+    if(sel.options.length>1)return;
+    Object.keys(data).forEach(g=>{
+      let o=document.createElement('option');o.textContent=g;o.value=g;sel.appendChild(o);
+    });
+  });
+}
+fillGovernorates();
+
+function updateMarkazHay(type=''){
+  let govSel = document.getElementById(type?"governorateReg":"governorate");
+  let mkSel = document.getElementById(type?"markazHayReg":"markazHay");
+  mkSel.innerHTML = "<option value=''>اختر المركز أو الحي</option>";
+  let val = govSel.value;
+  if(!val||!data[val]) return;
+  let arr = data[val].مراكز || data[val].أحياء;
+  arr.forEach(mk=>{
+    let o=document.createElement('option');o.textContent=mk;o.value=mk;mkSel.appendChild(o);
+  });
+}
+
+var jobsDB = [];
+function showJobs(jobs){
+  const rs=document.getElementById("jobsResults");
+  rs.innerHTML = "";
+  if(!jobs.length){
+    rs.innerHTML = `<div class="empty-state">لا توجد مهن مُسجلة بعد.<br>كن أول من يضيف مهنتك!</div>`;
+    return;
+  }
+  jobs.forEach(j=>{
+    rs.innerHTML += `<div class="result-card">
+      <b>الاسم: </b>${j.name}<br>
+      <b>المهنة: </b>${j.job}<br>
+      <b>المحافظة: </b>${j.gov}<br>
+      <b>المركز/الحي: </b>${j.markaz}<br>
+      <div class="phone"><i class="fas fa-phone"></i> ${j.phone?j.phone:"---"}</div>
+    </div>`;
+  });
+}
+
+function registerJob(){
+  let name=document.getElementById("nameReg").value.trim();
+  let job=document.getElementById("jobReg").value.trim();
+  let gov=document.getElementById("governorateReg").value;
+  let markaz=document.getElementById("markazHayReg").value;
+  let phone=document.getElementById("phoneReg").value.trim();
+  if(!name||!job||!gov||!markaz) return alert("يرجى ادخال جميع البيانات الرئيسية!");
+  let newJob={name,job,gov,markaz,phone};
+  jobsDB.unshift(newJob);
+  
+  // تحديث العداد بعد التسجيل
+  updateJobsCounter();
+  
+  document.getElementById("nameReg").value="";
+  document.getElementById("jobReg").value="";
+  document.getElementById("governorateReg").value="";
+  document.getElementById("markazHayReg").innerHTML="<option value=''>اختر المركز أو الحي</option>";
+  document.getElementById("phoneReg").value="";
+  changeSection('searchsec',document.querySelectorAll('.section-btn')[0]);
+  showJobs(jobsDB);
+  window.scrollTo({top: document.getElementById('jobsResults').offsetTop-80, behavior: 'smooth'});
+}
+
+function searchJobs(){
+  let gov=document.getElementById("governorate").value;
+  let markaz=document.getElementById("markazHay").value;
+  let field=document.getElementById("jobField").value;
+  let filtered = jobsDB.filter(j=>{
+    return (!gov||j.gov==gov) && (!markaz||j.markaz==markaz) && (!field||j.job==field);
+  });
+  showJobs(filtered);
+}
+
+// تهيئة العداد عند تحميل الصفحة
+updateJobsCounter();
+</script>
+</body>
+</html>
